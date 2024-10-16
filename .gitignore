@@ -42,7 +42,6 @@ project.fragment.lock.json
 *.snupkg
 
 # Dane i backupy
-*.bak
 *.sql
 
 # Backup dla systemów OS
