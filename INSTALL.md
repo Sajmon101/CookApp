@@ -1,39 +1,39 @@
-# Instalacja CookApp
+# CookApp Installation Guide
 
-Poniższa instrukcja pomoże Ci skonfigurować i uruchomić aplikację CookApp na lokalnym serwerze.
+The following instructions will help you set up and run the CookApp application on a local server.
 
-## Wymagania wstępne
+## Prerequisites
 
-- **.NET SDK 7.0 lub nowszy**: Upewnij się, że masz zainstalowane .NET SDK, które pozwala na uruchamianie aplikacji WPF i ASP.NET Core Web API.
-- **SQL Server**: Aplikacja korzysta z bazy danych SQL Server. Możesz użyć darmowej wersji SQL Server Express do przechowywania danych aplikacji.
-- **SQL Server Management Studio (SSMS)**: Zalecane narzędzie do zarządzania SQL Server, które ułatwia konfigurację bazy danych i jej obsługę.
+- **.NET SDK 7.0 or later**: Ensure you have the .NET SDK installed to run the WPF and ASP.NET Core Web API applications.
+- **SQL Server**: The application uses an SQL Server database. You can use the free SQL Server Express version for application data storage.
+- **SQL Server Management Studio (SSMS)**: Recommended for managing SQL Server, SSMS facilitates database setup and maintenance.
 
+## Step 1: Clone the Repository
 
-## Krok 1: Klonowanie repozytorium
+First, clone the CookApp repository to your local machine:
 
-Najpierw sklonuj repozytorium aplikacji CookApp na swój lokalny komputer:
-
+```bash
 git clone https://github.com/Sajmon101/CookApp.git
+```
 
+## Step 2: Restore Database from .bak File
 
-## Krok 2: Przywracanie bazy danych z pliku .bak
+1. **Launch SSMS** and connect to your local SQL Server instance.
+2. In **Object Explorer**, right-click on `Databases` and select **Restore Database...**.
+3. In the **Source** section, select **Device** and click the ellipsis button (`...`).
+4. In the **Select backup devices** window, click **Add** and locate the `CookApp.bak` file provided in the project files.
+5. Select the .bak file and click **OK**, then click **OK** again in the **Select backup devices** window.
+6. In the **Destination** section, choose a database name (e.g., `CookApp`) and click **OK** to restore the database.
 
-1. **Uruchom SSMS** i połącz się z instancją swojego lokalnego serwera SQL Server.
-2. W **Object Explorer** kliknij prawym przyciskiem myszy na `Databases` i wybierz **Restore Database...**.
-3. W oknie **Source** wybierz **Device** i kliknij przycisk z trzema kropkami (`...`).
-4. W oknie **Select backup devices** kliknij **Add** i wskaż plik `CookApp.bak`, który został dostarczony w plikach projektu.
-5. Wybierz plik .bak i kliknij **OK**, a następnie ponownie **OK** w oknie **Select backup devices**.
-6. W sekcji **Destination** wybierz nazwę bazy danych, np. `CookApp`, i kliknij **OK**, aby przywrócić bazę danych.
+Your database should now be ready for use.
 
-Twoja baza danych powinna być teraz gotowa do użycia.
+## Step 3: Configure appsettings.json Files
 
-## Krok 3: Konfiguracja plików appsettings.json
+### Creating appsettings.json Files
 
-### Tworzenie plików appsettings.json
+In the `CookApp` and `CookAppAPI` folders, create `appsettings.json` files based on the provided `appsettings.example.json` templates.
 
-W folderach `CookApp` oraz `CookAppAPI` utwórz pliki `appsettings.json` na podstawie dostarczonych przykładów `appsettings.example.json`.
-
-Przykładowa struktura `appsettings.json`:
+Example structure for `appsettings.json`:
 
 ```json
 {
@@ -53,64 +53,64 @@ Przykładowa struktura `appsettings.json`:
 }
 ```
 
-**Uwaga**: Dostosuj `Server`, `Database` i `BaseUrl` do swoich lokalnych ustawień.
+**Note**: Customize `Server`, `Database`, and `BaseUrl` according to your local setup.
 
-## Krok 4: Uruchomienie aplikacji
+## Step 4: Launch the Application
 
-### Uruchomienie WebAPI
+### Running the WebAPI
 
-1. Przejdź do folderu `CookAppAPI`:
+1. Navigate to the `CookAppAPI` folder:
 
-    ```
+    ```bash
     cd CookAppAPI
     ```
 
-2. Przywróć zależności projektu:
+2. Restore project dependencies:
 
-    ```
+    ```bash
     dotnet restore
     ```
 
-3. Uruchom aplikację WebAPI:
+3. Run the WebAPI application:
 
-    ```
+    ```bash
     dotnet run
     ```
 
-WebAPI powinno być teraz dostępne na `http://localhost:36032/`.
+The WebAPI should now be accessible at `http://localhost:36032/`.
 
-### Uruchomienie aplikacji WPF
+### Running the WPF Application
 
-1. Przejdź do folderu `CookApp`:
+1. Navigate to the `CookApp` folder:
 
-    ```
+    ```bash
     cd CookApp
     ```
 
-2. Przywróć zależności projektu:
+2. Restore project dependencies:
 
-    ```
+    ```bash
     dotnet restore
     ```
 
-3. Otwórz rozwiązanie CookApp w Visual Studio lub innym kompatybilnym edytorze i uruchom aplikację WPF.
+3. Open the CookApp solution in Visual Studio or another compatible editor and run the WPF application.
 
-## Opcjonalnie: Uruchamianie obu projektów jednocześnie
+## Optional: Running Both Projects Simultaneously
 
-Jeśli chcesz, aby oba projekty były uruchamiane jednocześnie w Visual Studio, wykonaj następujące kroki:
+If you wish to run both projects simultaneously in Visual Studio, follow these steps:
 
-1. Otwórz projekt CookApp (CookApp.sln)
-2. W **Solution Explorer** kliknij prawym przyciskiem myszy na nazwę rozwiązania i wybierz **Properties**.
-3. W sekcji **Startup Project** wybierz **Multiple startup projects**.
-4. Ustaw **Action** na **Start** dla obu projektów: `CookApp` i `CookAppAPI`.
-5. Kliknij **OK**, aby zapisać zmiany.
+1. Open the CookApp solution (`CookApp.sln`).
+2. In **Solution Explorer**, right-click on the solution name and select **Properties**.
+3. In the **Startup Project** section, choose **Multiple startup projects**.
+4. Set the **Action** to **Start** for both `CookApp` and `CookAppAPI`.
+5. Click **OK** to save the changes.
 
-## Krok 5: Testowanie aplikacji
+## Step 5: Testing the Application
 
-Aplikacja jest teraz gotowa do użytku. Zaloguj się jako kelner lub kucharz i sprawdź proces składania i realizacji zamówień.
+The application is now ready to use. Log in as either a waiter or a chef and test the order placement and fulfillment process.
 
-## Problemy z uruchomieniem
+## Troubleshooting
 
-Jeśli napotkasz problemy:
-- Upewnij się, że serwer SQL działa i że baza danych jest poprawnie przywrócona.
-- Sprawdź konfigurację `appsettings.json` w obu projektach i upewnij się, że ustawienia połączenia są poprawne.
+If you encounter issues:
+- Ensure that the SQL Server is running and that the database is correctly restored.
+- Check the `appsettings.json` configuration in both projects and verify that connection settings are accurate.
