@@ -2,16 +2,6 @@
 
 CookApp to aplikacja wspomagająca zarządzanie zamówieniami w lokalach gastronomicznych, umożliwiająca kelnerom składanie zamówień i przydzielanie ich do kucharzy. System jest zaprojektowany, aby zoptymalizować pracę kuchni i ułatwić komunikację między kelnerami a kucharzami.
 
-## Spis treści
-- [Opis aplikacji](#opis-aplikacji)
-- [Jak działa CookApp](#jak-działa-cookapp)
-- [Architektura aplikacji](#architektura-aplikacji)
-- [Budowa bazy danych](#budowa-bazy-danych)
-- [Komunikacja aplikacji z API](#komunikacja-aplikacji-z-api)
-- [Użyte technologie i dodatki](#użyte-technologie-i-dodatki)
-- [Instalacja](#instalacja)
-- [Licencja](#licencja)
-
 ## Jak działa CookApp
 
 Aplikacja posiada dwa typy kont użytkowników: kelnera i kucharza. Każdy kelner może składać zamówienia, przypisując dania do konkretnych stolików, natomiast kucharze realizują przydzielone im dania. W systemie wprowadzono mechanizm kolejki, który dba o równomierne przydzielanie zadań kucharzom, a także informuje kelnerów o gotowości dań do odbioru.
