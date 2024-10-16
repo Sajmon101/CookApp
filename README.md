@@ -12,17 +12,13 @@ CookApp to aplikacja wspomagająca zarządzanie zamówieniami w lokalach gastron
 - [Instalacja](#instalacja)
 - [Licencja](#licencja)
 
-## Opis aplikacji
-
-CookApp wspiera obsługę lokalu gastronomicznego, upraszczając proces składania zamówień przez kelnerów oraz ich realizację przez kucharzy. Aplikacja umożliwia zarządzanie kolejnością realizacji zamówień oraz optymalne przydzielanie zadań dostępnemu personelowi.
-
 ## Jak działa CookApp
 
 Aplikacja posiada dwa typy kont użytkowników: kelnera i kucharza. Każdy kelner może składać zamówienia, przypisując dania do konkretnych stolików, natomiast kucharze realizują przydzielone im dania. W systemie wprowadzono mechanizm kolejki, który dba o równomierne przydzielanie zadań kucharzom, a także informuje kelnerów o gotowości dań do odbioru.
 
 ### Przykład działania:
 1. Kelner dodaje zamówienie złożone z kilku dań.
-2. Dania są automatycznie przydzielane dostępnemu kucharzowi.
+2. Dania są automatycznie rozdzielane między dostępnych kucharzy.
 3. Gdy wszyscy kucharze są zajęci, zamówienia odkładają się do kolejki. Gdy tylko jakiś kucharz obsłuży zamówienie, natychmiast dostaje kolejne danie z kolejki.
 4. Kucharz realizuje danie i oznacza je jako gotowe, co natychmiast uwalnia kolejne danie do realizacji.
 5. Kelner otrzymuje informację o gotowym daniu, które może zanieść klientowi.
@@ -53,14 +49,21 @@ Komunikacja między aplikacją WPF a API webowym odbywa się za pomocą protoko�
 - **Web API**: ASP.NET Core Web API, OpenAPI, Swashbuckle
 - **Baza danych**: Microsoft SQL Server 2022
 
-##Preview
+## Preview
 
+### Panel logowania
 ![Panel logowania](Images/LoginPanel.png)
+---
+### Panel kucharza
 ![Panel kucharza](Images/ChefPanel.png)
+---
+### Panel kelnera - złóż zamówienie
 ![Panel kelnera - złóż zamówienie](Images/PlaceOrder.png)
+---
+### Panel kelnera - zobacz zamówienie
 ![Panel kelnera - zobacz zamówienie](Images/SeeOrder.png)
 
-## Running the Application
+## Instalacja
 
 For detailed instructions on how to run the SmartStaff application on a local server, please refer to the [INSTALL.md](./INSTALL.md) file. There, you will find the necessary steps to set up the environment and run the application.
 
