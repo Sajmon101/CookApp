@@ -53,9 +53,9 @@ Komunikacja między aplikacją WPF a API webowym odbywa się za pomocą protoko�
 - **Web API**: ASP.NET Core Web API, OpenAPI, Swashbuckle
 - **Baza danych**: Microsoft SQL Server 2022
 
-## Instalacja
+## Running the Application
 
-(Sekcja instalacji zostanie uzupełniona później)
+For detailed instructions on how to run the SmartStaff application on a local server, please refer to the [INSTALL.md](./INSTALL.md) file. There, you will find the necessary steps to set up the environment and run the application.
 
 ## Licencja
 
