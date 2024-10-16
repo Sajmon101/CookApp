@@ -1,0 +1,28 @@
+﻿<Window x:Class="CookApp.Views.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:local="clr-namespace:CookApp.Views"
+        mc:Ignorable="d" 
+        Title="CookApp Login" Height="300" Width="300"
+        Background="#101010"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+
+    <Grid>
+        <TextBlock Text="CookApp" VerticalAlignment="Top" HorizontalAlignment="Center" 
+                   FontSize="36" FontFamily="Segoe Script" Foreground="#FFFFFF" Margin="0,20,0,0"/>
+
+        <Label Content="Login" HorizontalAlignment="Left" Margin="43,101,0,0" VerticalAlignment="Top" Foreground="#FFFFFF"/>
+        <TextBox Name="loginInput" HorizontalAlignment="Right" Margin="0,105,57,0" VerticalAlignment="Top" 
+                 Width="120" Foreground="#FFFFFF" Background="#FF646B70"/>
+
+        <Label Content="Hasło" HorizontalAlignment="Left" Margin="43,141,0,0" VerticalAlignment="Top" Foreground="#FFFFFF" RenderTransformOrigin="0.538,0.242"/>
+        <PasswordBox Name="passwordInput" HorizontalAlignment="Right" Margin="0,145,57,0" VerticalAlignment="Top" 
+                     Width="120" Foreground="#FFFFFF" Background="#FF646B70" PasswordChar="●"/>
+
+        <Button Content="Zaloguj" Click="loginBtn" HorizontalAlignment="Left" Margin="115,193,0,0" 
+                VerticalAlignment="Top" Width="100" Height="24" Background="#FF345C7E" Foreground="#FFFFFF" 
+                BorderBrush="#FF345C7E" FontSize="14" />
+    </Grid>
+</Window>

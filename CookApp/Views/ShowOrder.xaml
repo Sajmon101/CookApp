@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="CookApp.Views.ShowOrder"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CookApp.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="267" d:DesignWidth="333"
+             Background="#101010">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="12,24,0,0" TextWrapping="Wrap" Text="Nr stolika" VerticalAlignment="Top" FontSize="14" Foreground="White"/>
+        <TextBox Name="tableNumInput" HorizontalAlignment="Left" FontSize="11" Margin="90,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Height="16" Background="#FF646B70" Foreground="White" BorderBrush="{x:Null}" PreviewTextInput="NumericOnlyTextBox_PreviewTextInput"/>
+        <Button x:Name="showBtn" Content="Wyświetl" Width="100" Height="20" FontSize="10" Click="ShowButton_Click" HorizontalAlignment="Left" Margin="210,23,0,0" VerticalAlignment="Top" Background="#FF345C7E" Foreground="White"/>
+        <StackPanel Margin="12,62,10,53">
+            <DataGrid x:Name="gridOrder" HeadersVisibility="Column" FontSize="10" MaxHeight="100" AutoGenerateColumns="False" Background="#1E1E1E" Foreground="White" AlternatingRowBackground="#333333" GridLinesVisibility="None" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" IsReadOnly="True" VerticalScrollBarVisibility="Auto">
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
+                        <Setter Property="Background" Value="#1E1E1E"/>
+                    </Style>
+                </DataGrid.RowStyle>
+                <DataGrid.ColumnHeaderStyle>
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="FontSize" Value="13"/>
+                        <Setter Property="Background" Value="#FF345C7E"/>
+                    </Style>
+                </DataGrid.ColumnHeaderStyle>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding DishInOrderId}" Width="*"/>
+                    <DataGridTextColumn Header="Nazwa" Binding="{Binding Name}" Width="*"/>
+                    <DataGridTextColumn Header="Cena" Binding="{Binding price, StringFormat={}{0:N2}}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="2" Text="Suma:" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="12" Foreground="White" Margin="0,0,0,0" RenderTransformOrigin="-0.034,0.508"/>
+                <TextBlock x:Name="totalPriceTextBlock" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="12" Foreground="White" Margin="-35,0,0,0"/>
+            </Grid>
+        </StackPanel>
+        <Button x:Name="PaidBtn" Content="Opłacone" Click="PaidBtn_Click" HorizontalAlignment="Left" FontSize="10" Margin="210,170,0,0" Width="100" Height="20" Background="#FF345C7E" Foreground="White"/>
+    </Grid>
+</UserControl>

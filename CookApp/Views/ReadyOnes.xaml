@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="CookApp.Views.ReadyOnes"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CookApp.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="267" d:DesignWidth="333" Loaded="UseControl_Loaded"
+             Background="#101010">
+    <Grid>
+        <DataGrid x:Name="gridReadyOnes" HeadersVisibility="Column" IsReadOnly="True" AutoGenerateColumns="False" SelectionUnit="FullRow" MaxHeight="200" VerticalScrollBarVisibility="Auto" Background="#202020" Foreground="White" BorderBrush="Gray" BorderThickness="1">
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Background" Value="#303030" />
+                    <Setter Property="Foreground" Value="White" />
+                    <Setter Property="FontSize" Value="13" />
+                    <Setter Property="Height" Value="24"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <Setter Property="Foreground" Value="White" />
+                    <Setter Property="FontSize" Value="10" />
+                    <Setter Property="BorderBrush" Value="#404040" />
+                    <Setter Property="BorderThickness" Value="0,0,0,1" />
+                </Style>
+            </DataGrid.CellStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Width="0.5*" Binding="{Binding DishInOrderId}">
+                    <DataGridTextColumn.CellStyle>
+                        <Style TargetType="DataGridCell" BasedOn="{StaticResource {x:Type DataGridCell}}">
+                            <Setter Property="Background" Value="#FF646B70"/>
+                            <Setter Property="FontSize" Value="13"/>
+                        </Style>
+                    </DataGridTextColumn.CellStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Nazwa" Width="1.5*" Binding="{Binding Name}">
+                    <DataGridTextColumn.CellStyle>
+                        <Style TargetType="DataGridCell" BasedOn="{StaticResource {x:Type DataGridCell}}">
+                            <Setter Property="Background" Value="#FF646B70"/>
+                            <Setter Property="FontSize" Value="13"/>
+                        </Style>
+                    </DataGridTextColumn.CellStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Nr stolika" Width="1*" Binding="{Binding TableNum}">
+                    <DataGridTextColumn.CellStyle>
+                        <Style TargetType="DataGridCell" BasedOn="{StaticResource {x:Type DataGridCell}}">
+                            <Setter Property="Background" Value="#FF646B70"/>
+                            <Setter Property="FontSize" Value="13"/>
+                        </Style>
+                    </DataGridTextColumn.CellStyle>
+                </DataGridTextColumn>
+
+                <DataGridTemplateColumn Header="Akcje" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Zatwierdź" Click="ConfirmButton_Click" Background="#FF345C7E" Foreground="White" BorderBrush="#FF345C7E"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

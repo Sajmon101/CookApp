@@ -1,0 +1,97 @@
+# Pliki systemowe i edytorów
+.vscode/
+*.DS_Store
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+
+# Foldery kompilacji i binaria
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+[Tt]est[Rr]esult/
+[Tt]est[Rr]esult-[0-9]*/
+
+# Pliki wygenerowane przez kompilator
+*.exe
+*.dll
+*.pdb
+*.cache
+*.ilk
+*.log
+*.csv
+*.sqlite
+
+# Konfiguracje użytkownika
+appsettings*.json
+appsettings*.Development.json
+appsettings*.Local.json
+secrets.json
+
+# Dane przywracania pakietów NuGet
+*.nupkg
+*.snupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+.nuget/
+*.nupkg
+*.snupkg
+
+# Dane i backupy
+*.bak
+*.sql
+
+# Backup dla systemów OS
+*.swp
+*~
+.project
+
+# Specyficzne dla Visual Studio
+_ReSharper*/
+*.sln.docstates
+*.resharper
+*.dotCover
+*.ncrunch*
+*.userprefs
+
+# Dane logowania i cache
+*.dbmdl
+*.dbproj.schemaview
+*.jfm
+.idea/
+.ionide/
+.fusebox/
+
+# Specyficzne dla Ridera/JetBrains
+.idea/
+*.sln.iml
+*.dotSettings
+*.dotSettings.user
+
+# ASP.NET Core
+## folder projektu wwwroot/dist, produkowane zasoby
+wwwroot/dist/
+wwwroot/dist-ssr/
+wwwroot/.rspec/
+wwwroot/node_modules/
+wwwroot/deploy/
+wwwroot/.nuxt/
+wwwroot/dist/
+
+# TFS
+$tf/
+
+# Pliki konfiguracji cURL
+.curlrc
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+node_modules/
