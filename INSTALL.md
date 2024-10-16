@@ -99,10 +99,11 @@ WebAPI powinno być teraz dostępne na `http://localhost:36032/`.
 
 Jeśli chcesz, aby oba projekty były uruchamiane jednocześnie w Visual Studio, wykonaj następujące kroki:
 
-1. W **Solution Explorer** kliknij prawym przyciskiem myszy na nazwę rozwiązania i wybierz **Properties**.
-2. W sekcji **Startup Project** wybierz **Multiple startup projects**.
-3. Ustaw **Action** na **Start** dla obu projektów: `CookApp` i `CookAppAPI`.
-4. Kliknij **OK**, aby zapisać zmiany.
+1. Otwórz projekt CookApp (CookApp.sln)
+2. W **Solution Explorer** kliknij prawym przyciskiem myszy na nazwę rozwiązania i wybierz **Properties**.
+3. W sekcji **Startup Project** wybierz **Multiple startup projects**.
+4. Ustaw **Action** na **Start** dla obu projektów: `CookApp` i `CookAppAPI`.
+5. Kliknij **OK**, aby zapisać zmiany.
 
 ## Krok 5: Testowanie aplikacji
 
