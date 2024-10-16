@@ -21,7 +21,7 @@ git clone https://github.com/Sajmon101/CookApp.git
 1. **Uruchom SSMS** i połącz się z instancją swojego lokalnego serwera SQL Server.
 2. W **Object Explorer** kliknij prawym przyciskiem myszy na `Databases` i wybierz **Restore Database...**.
 3. W oknie **Source** wybierz **Device** i kliknij przycisk z trzema kropkami (`...`).
-4. W oknie **Select backup devices** kliknij **Add** i wskaż plik `CookApp.bak`, który został dostarczony.
+4. W oknie **Select backup devices** kliknij **Add** i wskaż plik `CookApp.bak`, który został dostarczony w plikach projektu.
 5. Wybierz plik .bak i kliknij **OK**, a następnie ponownie **OK** w oknie **Select backup devices**.
 6. W sekcji **Destination** wybierz nazwę bazy danych, np. `CookApp`, i kliknij **OK**, aby przywrócić bazę danych.
 
@@ -99,10 +99,11 @@ WebAPI powinno być teraz dostępne na `http://localhost:36032/`.
 
 Jeśli chcesz, aby oba projekty były uruchamiane jednocześnie w Visual Studio, wykonaj następujące kroki:
 
-1. W **Solution Explorer** kliknij prawym przyciskiem myszy na nazwę rozwiązania i wybierz **Properties**.
-2. W sekcji **Startup Project** wybierz **Multiple startup projects**.
-3. Ustaw **Action** na **Start** dla obu projektów: `CookApp` i `CookAppAPI`.
-4. Kliknij **OK**, aby zapisać zmiany.
+1. Otwórz projekt CookApp (CookApp.sln)
+2. W **Solution Explorer** kliknij prawym przyciskiem myszy na nazwę rozwiązania i wybierz **Properties**.
+3. W sekcji **Startup Project** wybierz **Multiple startup projects**.
+4. Ustaw **Action** na **Start** dla obu projektów: `CookApp` i `CookAppAPI`.
+5. Kliknij **OK**, aby zapisać zmiany.
 
 ## Krok 5: Testowanie aplikacji
 
