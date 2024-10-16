@@ -1,62 +1,62 @@
 # CookApp
 
-CookApp to aplikacja wspomagająca zarządzanie zamówieniami w lokalach gastronomicznych, umożliwiająca kelnerom składanie zamówień i przydzielanie ich do kucharzy. System jest zaprojektowany, aby zoptymalizować pracę kuchni i ułatwić komunikację między kelnerami a kucharzami.
+CookApp is an application designed to assist in order management within dining establishments, allowing waitstaff to place orders and assign them to chefs. The system is created to optimize kitchen operations and facilitate communication between waitstaff and chefs.
 
-## Jak działa CookApp
+## How CookApp Works
 
-Aplikacja posiada dwa typy kont użytkowników: kelnera i kucharza. Każdy kelner może składać zamówienia, przypisując dania do konkretnych stolików, natomiast kucharze realizują przydzielone im dania. W systemie wprowadzono mechanizm kolejki, który dba o równomierne przydzielanie zadań kucharzom, a także informuje kelnerów o gotowości dań do odbioru.
+The app has two types of user accounts: waiter and chef. Each waiter can place orders, assigning dishes to specific tables, while chefs prepare the assigned dishes. The system includes a queue mechanism that ensures tasks are evenly distributed among chefs and informs waitstaff when dishes are ready for pickup.
 
-### Przykład działania:
-1. Kelner dodaje zamówienie złożone z kilku dań.
-2. Dania są automatycznie rozdzielane między dostępnych kucharzy.
-3. Gdy wszyscy kucharze są zajęci, zamówienia odkładają się do kolejki. Gdy tylko jakiś kucharz obsłuży zamówienie, natychmiast dostaje kolejne danie z kolejki.
-4. Kucharz realizuje danie i oznacza je jako gotowe, co natychmiast uwalnia kolejne danie do realizacji.
-5. Kelner otrzymuje informację o gotowym daniu, które może zanieść klientowi.
+### Example Workflow:
+1. A waiter adds an order consisting of several dishes.
+2. Dishes are automatically distributed among available chefs.
+3. When all chefs are busy, orders are added to a queue. As soon as a chef completes an order, they immediately receive the next dish from the queue.
+4. The chef prepares the dish and marks it as ready, which releases the next dish for preparation.
+5. The waiter receives a notification that the dish is ready to be served to the customer.
 
-## Architektura aplikacji
+## Application Architecture
 
-Aplikacja została zbudowana na platformie .NET, z wykorzystaniem technologii WPF oraz ASP.NET Core Web API. Architektura aplikacji składa się z:
+The application is built on the .NET platform, utilizing WPF and ASP.NET Core Web API technologies. The architecture includes:
 
-- **Aplikacji WPF** – interfejsu użytkownika dla kelnerów i kucharzy.
-- **Web API** – obsługującego komunikację z bazą danych.
-- **Bazy danych** – przechowującej informacje o zamówieniach i użytkownikach.
+- **WPF Application** – The user interface for waitstaff and chefs.
+- **Web API** – Manages communication with the database.
+- **Database** – Stores information on orders and users.
 
-![Diagram architektury aplikacji](Images/Architecture.png)
+![Application Architecture Diagram](Images/Architecture.png)
 
-## Budowa bazy danych
+## Database Structure
 
-Baza danych została utworzona przy użyciu Microsoft SQL Server i zawiera tabele związane z zamówieniami, daniami i użytkownikami. Każde zamówienie może zawierać wiele dań, a każde danie jest przypisywane kucharzom w zależności od dostępności.
+The database is created using Microsoft SQL Server and includes tables related to orders, dishes, and users. Each order can contain multiple dishes, and each dish is assigned to chefs based on availability.
 
-![Diagram bazy danych](Images/DataBase.png)
+![Database Diagram](Images/DataBase.png)
 
-## Komunikacja aplikacji z API
+## Application and API Communication
 
-Komunikacja między aplikacją WPF a API webowym odbywa się za pomocą protokołu HTTP, wykorzystując format JSON do wymiany danych. API zostało zaprojektowane w oparciu o Entity Framework i obsługuje asynchroniczne żądania, które umożliwiają płynną interakcję z bazą danych.
+Communication between the WPF application and the web API occurs over HTTP, using JSON for data exchange. The API is designed with Entity Framework and supports asynchronous requests, enabling smooth interaction with the database.
 
-## Użyte technologie i dodatki
+## Technologies and Add-ons Used
 
-- **Aplikacja WPF**: .NET 7.0 (Windows), m.in. Entity Framework Core, Newtonsoft.Json
+- **WPF Application**: .NET 7.0 (Windows), including Entity Framework Core, Newtonsoft.Json
 - **Web API**: ASP.NET Core Web API, OpenAPI, Swashbuckle
-- **Baza danych**: Microsoft SQL Server 2022
+- **Database**: Microsoft SQL Server 2022
 
 ## Preview
 
-### Panel logowania
-![Panel logowania](Images/LoginPanel.png)
+### Login Panel
+![Login Panel](Images/LoginPanel.png)
 ---
-### Panel kucharza
-![Panel kucharza](Images/ChefPanel.png)
+### Chef Panel
+![Chef Panel](Images/ChefPanel.png)
 ---
-### Panel kelnera - złóż zamówienie
-![Panel kelnera - złóż zamówienie](Images/PlaceOrder.png)
+### Waiter Panel - Place Order
+![Waiter Panel - Place Order](Images/PlaceOrder.png)
 ---
-### Panel kelnera - zobacz zamówienie
-![Panel kelnera - zobacz zamówienie](Images/SeeOrder.png)
+### Waiter Panel - View Order
+![Waiter Panel - View Order](Images/SeeOrder.png)
 
-## Instalacja
+## Installation
 
 For detailed instructions on how to run the SmartStaff application on a local server, please refer to the [INSTALL.md](./INSTALL.md) file. There, you will find the necessary steps to set up the environment and run the application.
 
-## Licencja
+## License
 
-Ten projekt jest licencjonowany na warunkach licencji MIT. Szczegóły w pliku LICENSE.
+This project is licensed under the terms of the MIT License. Details can be found in the LICENSE file.
