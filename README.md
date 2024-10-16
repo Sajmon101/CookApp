@@ -35,13 +35,13 @@ Aplikacja została zbudowana na platformie .NET, z wykorzystaniem technologii WP
 - **Web API** – obsługującego komunikację z bazą danych.
 - **Bazy danych** – przechowującej informacje o zamówieniach i użytkownikach.
 
-![Diagram architektury aplikacji](ścieżka/do/diagram_architektury.png)
+![Diagram architektury aplikacji](Images/Architecture.png)
 
 ## Budowa bazy danych
 
 Baza danych została utworzona przy użyciu Microsoft SQL Server i zawiera tabele związane z zamówieniami, daniami i użytkownikami. Każde zamówienie może zawierać wiele dań, a każde danie jest przypisywane kucharzom w zależności od dostępności.
 
-![Diagram bazy danych](ścieżka/do/diagram_bazy_danych.png)
+![Diagram bazy danych](Images/DataBase.png)
 
 ## Komunikacja aplikacji z API
 
@@ -52,6 +52,13 @@ Komunikacja między aplikacją WPF a API webowym odbywa się za pomocą protoko�
 - **Aplikacja WPF**: .NET 7.0 (Windows), m.in. Entity Framework Core, Newtonsoft.Json
 - **Web API**: ASP.NET Core Web API, OpenAPI, Swashbuckle
 - **Baza danych**: Microsoft SQL Server 2022
+
+##Preview
+
+![Panel logowania](Images/LoginPanel.png)
+![Panel kucharza](Images/ChefPanel.png)
+![Panel kelnera - złóż zamówienie](Images/PlaceOrder.png)
+![Panel kelnera - zobacz zamówienie](Images/SeeOrder.png)
 
 ## Running the Application
 
