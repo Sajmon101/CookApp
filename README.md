@@ -41,7 +41,7 @@ Aplikacja została zbudowana na platformie .NET, z wykorzystaniem technologii WP
 
 Baza danych została utworzona przy użyciu Microsoft SQL Server i zawiera tabele związane z zamówieniami, daniami i użytkownikami. Każde zamówienie może zawierać wiele dań, a każde danie jest przypisywane kucharzom w zależności od dostępności.
 
-![Diagram bazy danych](Images/DataBase)
+![Diagram bazy danych](Images/DataBase.png)
 
 ## Komunikacja aplikacji z API
 
