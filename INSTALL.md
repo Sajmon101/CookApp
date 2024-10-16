@@ -21,7 +21,7 @@ git clone https://github.com/Sajmon101/CookApp.git
 1. **Uruchom SSMS** i połącz się z instancją swojego lokalnego serwera SQL Server.
 2. W **Object Explorer** kliknij prawym przyciskiem myszy na `Databases` i wybierz **Restore Database...**.
 3. W oknie **Source** wybierz **Device** i kliknij przycisk z trzema kropkami (`...`).
-4. W oknie **Select backup devices** kliknij **Add** i wskaż plik `CookApp.bak`, który został dostarczony.
+4. W oknie **Select backup devices** kliknij **Add** i wskaż plik `CookApp.bak`, który został dostarczony w plikach projektu.
 5. Wybierz plik .bak i kliknij **OK**, a następnie ponownie **OK** w oknie **Select backup devices**.
 6. W sekcji **Destination** wybierz nazwę bazy danych, np. `CookApp`, i kliknij **OK**, aby przywrócić bazę danych.
 
