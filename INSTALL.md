@@ -75,7 +75,7 @@ In the `CookApp` and `CookAppAPI` folders, create `appsettings.json` with conten
     dotnet run
     ```
 
-The WebAPI should now be accessible at `http://localhost:36032/`.
+The WebAPI should now be accessible at `http://localhost:YourPort/`.
 
 ### Running the WPF Application
 
