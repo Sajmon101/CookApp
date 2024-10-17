@@ -36,7 +36,7 @@ Communication between the WPF application and the web API occurs over HTTP, usin
 ## Technologies and Add-ons Used
 
 - **WPF Application**: .NET 7.0 (Windows), including Entity Framework Core, Newtonsoft.Json
-- **Web API**: ASP.NET Core Web API, OpenAPI, Swashbuckle
+- **Web API**: ASP.NET Core Web API, OpenAPI
 - **Database**: Microsoft SQL Server 2022
 
 ## Preview
