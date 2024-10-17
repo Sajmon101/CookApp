@@ -31,7 +31,7 @@ Your database should now be ready for use.
 
 ### Creating appsettings.json Files
 
-In the `CookApp` and `CookAppAPI` folders, create `appsettings.json` files based on the provided `appsettings.example.json` templates.
+In the `CookApp` and `CookAppAPI` folders, create `appsettings.json`.
 
 Example structure for `appsettings.json`:
 
