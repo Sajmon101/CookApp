@@ -53,10 +53,6 @@ Communication between the WPF application and the web API occurs over HTTP, usin
 ### Waiter Panel - View Order
 ![Waiter Panel - View Order](Images/SeeOrder.png)
 
-## Installation
-
-For detailed instructions on how to run the SmartStaff application on a local server, please refer to the [INSTALL.md](./INSTALL.md) file. There, you will find the necessary steps to set up the environment and run the application.
-
 ## License
 
 This project is licensed under the terms of the MIT License. Details can be found in the LICENSE file.
